@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    container_name: golang-crud
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: g0l4ng
+      POSTGRES_DB: golang-crud
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
