@@ -16,6 +16,6 @@ func Init(url string) *gorm.DB {
 	}
 
 	db.AutoMigrate(&models.CharlieBrownJrSongs{})
-
+	
 	return db
 }
