@@ -4,14 +4,15 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/magnojunior07/golang-crud/pkg/common/config"
 	"github.com/magnojunior07/golang-crud/pkg/common/db"
 	"github.com/spf13/viper"
 )
 	
 
 func main() {
-	config.LoadConfig()
+	viper.SetConfigFile("./pkg/common/envs/.env")
+	viper.ReadInConfig()
+
 	router := gin.Default()
 
 	port := viper.Get("PORT").(string)
