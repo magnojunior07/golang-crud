@@ -1,21 +1,21 @@
 package db
 
 import (
-	"log"
+   "log"
 
-	"github.com/magnojunior07/golang-crud/pkg/common/models"
-	"gorm.io/driver/postgres"
-	"gorm.io/gorm"
+   "github.com/magnojunior07/golang-crud/pkg/common/models"
+   "gorm.io/driver/postgres"
+   "gorm.io/gorm"
 )
 
 func Init(url string) *gorm.DB {
-	db, err := gorm.Open(postgres.Open(url), &gorm.Config{})
+   db, err := gorm.Open(postgres.Open(url), &gorm.Config{})
 
-	if err != nil {
-		log.Fatal(err)
-	}
+   if err != nil {
+ 	log.Fatal(err)
+    }
 
-	db.AutoMigrate(&models.CharlieBrownJrSongs{})
+   db.AutoMigrate(&models.CharlieBrownJrSongs{})
 	
-	return db
+   return db
 }
