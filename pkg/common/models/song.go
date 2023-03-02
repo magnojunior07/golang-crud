@@ -4,10 +4,10 @@ import "gorm.io/gorm"
 
 type CharlieBrownJrSongs struct {
    gorm.Model
-   SongName	string `json:"songName"`
-   Album	string `json:"qtd_titles"`
+   SongName	string `json:"song_name"`
+   Album	string `json:"album"`
    Duration	string `json:"duration"`
-   LinkSpotify	string `json:"linkSpotify"`
-   LinkYouTube	string `json:"linkYouTube"`
+   LinkSpotify	string `json:"link_spotify"`
+   LinkYouTube	string `json:"link_you_tube"`
 }
 
