@@ -15,5 +15,6 @@ func RegisterRoutes(router *gin.Engine, db *gorm.DB) {
 	}
 
 	router.GET("/song", h.GetSongs)
+	router.POST("/song", h.CreateSong)
 
 }

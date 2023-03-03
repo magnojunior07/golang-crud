@@ -14,5 +14,5 @@ func (h handler) GetSongs(ctx *gin.Context) {
 		return
 	}
 	
-	ctx.JSONP(http.StatusOK, &songs)
+	ctx.IndentedJSON(http.StatusOK, &songs)
 }

@@ -23,7 +23,8 @@ func main() {
 
 	songs.RegisterRoutes(router, dbHandler)
 
+	fmt.Println("Hello, world")
+
 	router.Run(port)
 
-	fmt.Println("Hello, world")
 }
