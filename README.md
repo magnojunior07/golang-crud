@@ -5,7 +5,7 @@
 Crud feito em golang, com o objetivo de estudos, fiz com a temática de Charlie Brown Jr, uma das minhas bandas favoritas de todos os tempos, uma singela homenagem ao Chorão.
 
 ## Funcionalidades
-A aplicação implementa os principais conceitos de um crud, os métodos de ler, inserir, atualizar e deletar dados, com o tempo pretendo deixar o projeto um pouco mais robusto.
+A aplicação implementa os principais conceitos de um crud, os métodos de ler, inserir, atualizar e deletar dados, no caso, músicas do Charlie Brown Jr, com o tempo pretendo deixar o projeto um pouco mais robusto.
 
 ## Tecnologias Usadas
 - Golang versão 1.20
@@ -26,7 +26,7 @@ docker compose up -d
 Depois crie uma pasta chamda "envs" com arquivo .env dentro do diretório "pkg/common" e coleque as variáveis de ambiente de acordo com o seguinte modelo:
 ```
 PORT=:8080 //porta onde a aplicação irá rodar na máquina
-DB_URL=postgres://postgres:postgres@localhost:5432 // string de conexão com o banco de dados, deve estar de acordo com o que foi definido no arquivo docker-compose.yml
+DB_URL=postgres://USUÁRIO:SENHA=@HOST:PORTA // string de conexão com o banco de dados, deve estar de acordo com o que foi definido no arquivo docker-compose.yml
 ```
 Após isso basta iniciar o servidor com o comando:
 ```
