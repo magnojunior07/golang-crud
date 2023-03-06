@@ -2,7 +2,7 @@
 <div align="center">
 <img src="https://rollingstone.uol.com.br/media/uploads/chorao-charlie-brown-jr_reproducao_instagram.jpg" width="500rem">
 </div>
-Crud feito em golang, com o objetivo de estudos, fiz com a temática de Charlie Brown Jr, uma das minhas bandas favoritas de todos os tempos, e uma singela homenagem ao Chorão.
+Crud feito em Golang, com o objetivo de estudos, fiz com a temática de Charlie Brown Jr, uma das minhas bandas favoritas de todos os tempos, e uma singela homenagem ao Chorão.
 
 ## Funcionalidades
 A aplicação implementa os principais conceitos de um crud, os métodos de ler, inserir, atualizar e deletar dados, no caso, músicas do Charlie Brown Jr, com o tempo pretendo deixar o projeto um pouco mais robusto.
