@@ -2,6 +2,7 @@ package songs
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/magnojunior07/golang-crud/pkg/common/models"
@@ -35,6 +36,7 @@ func (h handler) UpdateSong(ctx *gin.Context) {
 	song.Duration = body.Duration
 	song.LinkSpotify = body.LinkSpotify
 	song.LinkYouTube = body.LinkYouTube
+	song.UpdatedAt = time.Now()
 
 	h.DB.Save(&song)
 

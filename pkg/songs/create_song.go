@@ -2,9 +2,10 @@ package songs
 
 import (
 	"net/http"
-	
-	"github.com/magnojunior07/golang-crud/pkg/common/models"
+	"time"
+
 	"github.com/gin-gonic/gin"
+	"github.com/magnojunior07/golang-crud/pkg/common/models"
 )
 
 type CreateSongRequestBody struct {
@@ -30,6 +31,8 @@ func (h handler) CreateSong(ctx *gin.Context) {
 	song.Duration = body.Duration
 	song.LinkSpotify = body.LinkSpotify
 	song.LinkYouTube = body.LinkYouTube
+	song.UpdatedAt = time.Now()
+	song.CreatedAt = time.Now()
 
 	if result := h.DB.Create(&song); result.Error != nil {
 		ctx.AbortWithError(http.StatusNotFound, result.Error)
