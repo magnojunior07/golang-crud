@@ -1,4 +1,4 @@
-# golang-crud
+# Golang-Crud
 <div align="center">
 <img src="https://rollingstone.uol.com.br/media/uploads/chorao-charlie-brown-jr_reproducao_instagram.jpg" width="500rem">
 </div>
