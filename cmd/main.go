@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"github.com/magnojunior07/golang-crud/pkg/common/db"
 	"github.com/magnojunior07/golang-crud/pkg/songs"
@@ -22,8 +20,6 @@ func main() {
 	dbHandler := db.Init(dbUrl)
 
 	songs.RegisterRoutes(router, dbHandler)
-
-	fmt.Println("Hello, world")
 
 	router.Run(port)
 
