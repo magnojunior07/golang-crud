@@ -10,25 +10,40 @@ A aplicação implementa os principais conceitos de um crud, os métodos de ler,
 ## Tecnologias Usadas
 - Golang versão 1.20
 - Gin
+- Air
 - Gorm
 - Viper
 - Docker
+
 ## Inicializando o Projeto
-Para inicializar o projeto basta ter a linguagem Golang versão 1.20 instalada em sua máquina e o docker
-Depois de fazer o git clone execute o comando abaixo para baixar as dependências do projeto:
-```
-go mod tidy
-```
-Após isso, certifique-se que que não tem nenhum serviço do postgres em execução na porta 5234 e execute o comando abaixo para subir o container do banco de dados:
-```
-docker compose up -d
-```
-Depois crie uma pasta chamda "envs" com arquivo .env dentro do diretório "pkg/common" e coleque as variáveis de ambiente de acordo com o seguinte modelo:
+Primeiramente crie uma pasta chamda **envs** com arquivo .env dentro do diretório **pkg/common** e coloque as variáveis de ambiente de acordo com o seguinte modelo:
 ```
 PORT=:8080 //porta onde a aplicação irá rodar na máquina
 DB_URL=postgres://USUÁRIO:SENHA=@HOST:PORTA // string de conexão com o banco de dados, deve estar de acordo com o que foi definido no arquivo docker-compose.yml
 ```
-Após isso basta iniciar o servidor com o comando:
+Para inicializar o projeto basta ter o docker instalado em sua máquina, mas primeiramente, certifique-se que que não tem nenhum serviço do postgres em execução na porta **5234** e apó isso execute os comandos abaixo para subir o container da aplicação:
+
+### Para criar uma imagem a partir do Dockerfile:
 ```
-go run cmd/main.go
+docker build .
+```
+
+### Servidor para desenvolvimento
+Para subir o container em versão de desenvolvimento, execute o seguinte comando:
+```
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+```
+Para derrubar o servidor:
+```
+docker compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+```
+
+### Servidor para produção:
+Para subir o container em versão de produção, execute o seguinte comando:
+```
+docker compose -f docker-compose.yml -f docker-compose.build.yml up -d
+```
+Para derrubar o servidor:
+```
+docker compose -f docker-compose.yml -f docker-compose.build.yml down
 ```
