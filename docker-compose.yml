@@ -1,7 +1,23 @@
+version: '3.1'
+
 services:
+  api: 
+    container_name: golang-crud
+    build: 
+      context: .
+      target: dev
+    env_file:
+      - ./pkg/common/envs/.env
+    depends_on:
+      - db
+    links: 
+      - db
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/app
   db:
     image: postgres
-    container_name: golang-crud
     ports:
       - 5432:5432
     environment:

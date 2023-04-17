@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+    ports:
+      - 5432:5432
+  api: 
+    container_name: golang-crud
+    build: 
+      context: .
+      target: dev
+    ports:
+      - 8080:8080
+volumes:
+  pgdata:
