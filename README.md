@@ -16,7 +16,7 @@ A aplicação implementa os principais conceitos de um crud, os métodos de ler,
 - Docker
 
 ## Inicializando o Projeto
-Primeiramente crie uma pasta chamda **envs** com arquivo .env dentro do diretório **pkg/common** e coloque as variáveis de ambiente de acordo com o seguinte modelo:
+Primeiramente crie uma pasta chamda **envs** com arquivo **.env** dentro do diretório **pkg/common** e coloque as variáveis de ambiente de acordo com o seguinte modelo:
 ```
 PORT=:8080 //porta onde a aplicação irá rodar na máquina
 DB_URL=postgres://USUÁRIO:SENHA=@HOST:PORTA // string de conexão com o banco de dados, deve estar de acordo com o que foi definido no arquivo docker-compose.yml
